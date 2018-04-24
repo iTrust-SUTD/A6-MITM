@@ -11,9 +11,11 @@ Requirements
 ============
 
 Hardware
+
 * Laptop with at least two network interfaces
 
 Software
+
 * Python 2.7
 * Scapy (http://www.secdev.org/projects/scapy/)
 * Ethernet/IP dissectors for Scapy (https://github.com/scy-phy/scapy-cip-enip)
