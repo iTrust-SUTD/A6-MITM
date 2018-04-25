@@ -17,6 +17,8 @@ Hardware
 Software
 
 * Python 2.7
+* Bridge Control (brctl)
+* NetfilterQueue (https://github.com/kti/python-netfilterqueue)
 * Scapy (http://www.secdev.org/projects/scapy/)
 * Ethernet/IP dissectors for Scapy (https://github.com/scy-phy/scapy-cip-enip)
 
@@ -24,6 +26,6 @@ Software
 Setup
 =====
 
-1. Ensure the device is physically connected in the middle of two PLCs
-2. Edit start.sh to bridge the two network adaptors
+1. Ensure the device is physically connected in the middle of two PLCs.
+2. Edit start.sh to bridge the two network adaptors.
 3. 
