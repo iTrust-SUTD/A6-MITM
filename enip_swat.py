@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (c) 2015 David I. Urbina, david.urbina@utdallas.edu
+# Copyright (c) 2018 Francisco Furtado, francisco_dos@sutd.edu.sg
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -51,7 +51,6 @@ class SWAT_LIT(scapy_all.Packet):
         scapy_all.LEIntField('SAL', 0),
         scapy_all.LEIntField('SAH', 0),
         scapy_all.LEIntField('SAHH', 0),
-        # scapy_all.LEIntField('Spare3', 0),
         scapy_all.BitEnumField('spare1', 0, 1, {}),
         scapy_all.BitEnumField('control', 0, 1, {0: 'actual', 1: 'simulation'}),
         scapy_all.BitEnumField('status', 0, 1, {0: 'unhealthy', 1: 'healthy'}),

@@ -12,12 +12,13 @@ Requirements
 
 Hardware
 
+* Ubuntu OS
 * Laptop with at least two network interfaces
 
 Software
 
 * Python 2.7
-* Bridge Control (brctl)
+* Bridge Control (https://help.ubuntu.com/community/NetworkConnectionBridge)
 * NetfilterQueue (https://github.com/kti/python-netfilterqueue)
 * Scapy (http://www.secdev.org/projects/scapy/)
 * Ethernet/IP dissectors for Scapy (https://github.com/scy-phy/scapy-cip-enip)
