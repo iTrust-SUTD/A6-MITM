@@ -29,4 +29,4 @@ Setup
 
 1. Ensure the device is physically connected in the middle of two PLCs.
 2. Edit start.sh to bridge the two network adaptors.
-3. 
+3. Run python mutate.py.
