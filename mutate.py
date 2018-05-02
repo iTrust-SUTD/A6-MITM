@@ -199,7 +199,7 @@ def start():
 
 def __setup():
     # change network interface 
-    #os.system('iptables -A FORWARD -p tcp -m physdev --physdev-in enp0s3 -j NFQUEUE --queue-num 0') #incoming
+    os.system('iptables -A FORWARD -p tcp -m physdev --physdev-in enp0s3 -j NFQUEUE --queue-num 0') #incoming
     #os.system('iptables -A FORWARD -p tcp -m physdev --physdev-in enp0s8 -j NFQUEUE --queue-num 0') #outgoing
 
 

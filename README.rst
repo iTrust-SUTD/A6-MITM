@@ -29,4 +29,7 @@ Setup
 
 1. Ensure the device is physically connected in the middle of two PLCs.
 2. Edit start.sh to bridge the two network adaptors.
-3. Run python mutate.py.
+3. Edit mutate.py Line 202 with the incoming Ethernet interface.
+
+Sample Execution
+================
