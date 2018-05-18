@@ -31,17 +31,17 @@ Setup
 2. Edit start.sh to bridge the two network adaptors.
 3. Edit mutate.py Line 202 with the incoming Ethernet interface.
 
-Mutation Table
-===============
+Mutation Operators
+==================
 
 
 .. csv-table:: 
    :header: "Mutation Name", "Code", "Description"
    :widths: 35, 20, 50
 
-   "Add static Delta", "ASD(𝛿)", "Adds/subtracts an absolute, unchanging 𝛿 to state measurements"
-   "Add Limits Delta", "ALD(𝛿)", "Adds/subtracts random value between -𝛿 and +𝛿 to state measurements"
-   "Add Random Delta 𝛿", "ARD(𝛿\ :sub:`1`\,𝛿\ :sub:`2`\)", "Adds/subtracts a random value between 𝛿\ :sub:`1`\ and 𝛿\ :sub:`2`\ to state measurements"
+   "Add static 𝛿", "ASD(𝛿)", "Adds/subtracts an absolute, unchanging 𝛿 to state measurements"
+   "Add Limits 𝛿", "ALD(𝛿)", "Adds/subtracts random value between -𝛿 and +𝛿 to state measurements"
+   "Add Random 𝛿", "ARD(𝛿\ :sub:`1`\,𝛿\ :sub:`2`\)", "Adds/subtracts a random value between 𝛿\ :sub:`1`\ and 𝛿\ :sub:`2`\ to state measurements"
    "Set to Zero", "STZ", "Sets state measurement to zero"
    "Set to One", "STO", Sets state measurement to one"
    "Set to Static", "STS(𝛿)", "Sets state measurement to static value"
