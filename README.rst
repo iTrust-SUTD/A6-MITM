@@ -31,12 +31,12 @@ Setup
 2. Edit start.sh to bridge the two network adaptors.
 3. Edit mutate.py Line 202 with the incoming Ethernet interface.
 
-Sample Execution
-================
+Mutation Table
+===============
 
 
-.. csv-table:: Mutation Table
-   :header: "Name", "Code", "Description"
+.. csv-table:: 
+   :header: "Mutation Name", "Code", "Description"
    :widths: 35, 20, 50
 
    "Add static Delta", "ASD(𝛿)", "Adds/subtracts an absolute, unchanging 𝛿 to state measurements"
