@@ -37,14 +37,14 @@ Sample Execution
 
 .. csv-table:: Mutation Table
    :header: "Name", "Code", "Description"
-   :widths: 30, 20, 50
+   :widths: 35, 20, 50
 
    "Add static Delta", "ASD($\delta$)", "Adds/subtracts an absolute, unchanging $\delta$ to state measurements"
    "Add Limits Delta", "ALD($\delta$)", "Adds/subtracts random value between $-\delta$ and $+\delta$ to state measurements"
    "Add Random Delta $\delta$", "ARD($\delta_1$,$\delta_2$)", "Adds/subtracts a random value between $\delta_1$ and $\delta_2$ to state measurements"
    "Set to Zero", "STZ", "Sets state measurement to zero"
    "Set to One", "STO", Sets state measurement to one"
-   "Set to Static, STS($\delta$)", "Sets state measurement to static value"
+   "Set to Static", "STS($\delta$)", "Sets state measurement to static value"
    "Set to Random", "STR($\delta_1$,$\delta_2$)", "Set state measurement to a random value between $\delta_1$ and $\delta_2$"
-   "Bit Shift Left &BSL($\delta$)", "Sets state measurement is bit-shifted to left by $\delta$ bits"
-   "Bit Shift Right &BSR($\delta$)", "Sets state measurement is bit-shifted to right by $\delta$ bits"
+   "Bit Shift Left", "BSL($\delta$)", "Sets state measurement is bit-shifted to left by $\delta$ bits"
+   "Bit Shift Right", "BSR($\delta$)", "Sets state measurement is bit-shifted to right by $\delta$ bits"
