@@ -23,7 +23,6 @@ Software
 * Scapy (http://www.secdev.org/projects/scapy/)
 * Ethernet/IP dissectors for Scapy (https://github.com/scy-phy/scapy-cip-enip)
 
-
 Setup
 =====
 
@@ -48,3 +47,29 @@ Mutation Operators
    "Set to Random", "STR(𝛿\ :sub:`1`\,𝛿\ :sub:`2`\)", "Set state measurement to a random value between 𝛿\ :sub:`1`\ and 𝛿\ :sub:`2`\"
    "Bit Shift Left", "BSL(𝛿)", "Sets state measurement is bit-shifted to left by 𝛿 bits"
    "Bit Shift Right", "BSR(𝛿)", "Sets state measurement is bit-shifted to right by 𝛿 bits"
+
+Contributing
+=====
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
+
+* Fork the Project
+* Create your Feature Branch (git checkout -b feature/AmazingFeature)
+* Commit your Changes (git commit -m 'Add some AmazingFeature')
+* Push to the Branch (git push origin feature/AmazingFeature)
+* Open a Pull Request
+
+
+License
+=====
+Distributed under the GNU License. See `LICENSE.txt` for more information.
+
+
+Contact
+=====
+iTrust - itrust@sutd.edu.sg
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+* Francisco Furtado (ifyouaretea@gmail.com)
