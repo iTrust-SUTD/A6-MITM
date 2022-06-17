@@ -70,6 +70,6 @@ Contact
 =====
 iTrust - itrust@sutd.edu.sg
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+Acknowledgments
+=====
 * Francisco Furtado (ifyouaretea@gmail.com)
